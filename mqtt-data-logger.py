@@ -15,7 +15,12 @@ import sys, getopt,random
 import logging
 import mlogger as mlogger
 import threading
-from queue import Queue
+import sys
+is_py2 = sys.version[0] == '2'
+if is_py2:
+    from queue import Queue
+else:
+    from queue import queue
 from mqtt_functions import *
 from command import command_input
 import command
