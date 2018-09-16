@@ -8,12 +8,14 @@ import time,os,json,logging
 
 ###############
 class m_logger(object):
-    """Class for logging data to a file. You can set the maximim bunber
+"""
+Class for logging data to a file. You can set the maximim bunber
 of messages in a file the default is 1000. When the file is full
 a new file is created.Log files are store under a root directoy
 and a sub directory that uses the timestamp for the directory name
 Log file data is flushed immediately to disk so that data is not lost.
-Data can be stored as plain text or in JSON format """
+Data can be stored as plain text or in JSON format 
+"""
     def __init__(self,log_dir="mlogs",log_recs=1000,number_logs=0):
         self.log_dir=log_dir
         self.log_recs=log_recs
